@@ -30,4 +30,7 @@ typechain
 
 #Hardhat files
 cache
-artifacts
+src/artifacts/*
+!src/artifacts/contracts
+
+
