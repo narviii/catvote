@@ -83,7 +83,10 @@ function App() {
           <h3>
             Let's vote on a blockchain.
           </h3>
-
+          <p style={{textAlign:'center'}}>
+            App uses Metamask and voting is on Rinkeby test network.
+          </p>
+          
           <div className='voteBtnGroup'>
             <button className="voteButton btnShadow" onClick={() => vote(true)} disabled={isMetamask ? true : false}>Yay!</button>
             <button className="voteButton btnShadow" onClick={() => vote(false)} disabled={isMetamask ? true : false}>Nay!</button>
