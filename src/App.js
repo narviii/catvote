@@ -28,7 +28,9 @@ function App() {
       const signer = provider.getSigner()
       const contract = new ethers.Contract(contractAdress, CatVote.abi, signer)
       const transaction = await contract.recordVote(vote)
+      setError("Voted!")
       const reciept = await transaction.wait()
+      setError("Transaction went through!")
       const logs = await getLogs()
       setLogs(logs)
     } catch (error) {
